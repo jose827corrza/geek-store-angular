@@ -1,0 +1,8 @@
+<!-- <img [src]="product.image" alt="" width="200"> -->
+<div class="flex flex-col items-center">
+  <!-- <app-img [value]="product.image"></app-img> -->
+  <app-img [value]="product.images[0]"></app-img>
+  <h2>${{product.price | currency: 'COP'}}</h2>
+  <p appHighlight>{{product.title}}</p>
+  <button (click)="addToCart()">Add to Cart</button>
+</div>

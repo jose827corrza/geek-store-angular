@@ -1,0 +1,11 @@
+<p>My products: {{myCartItems.length}}</p>
+<p>My total: {{total}}</p>
+<p>{{date | timeAgo}}</p>
+<p>{{today | date }}</p>
+<div class="flex flex-col items-center md:grid md:grid-cols-3 px-3 pt-8 lg:grid-cols-5">
+  <app-product
+    *ngFor="let product of products"
+    [product]="product"
+    (addedToCart)="onAddToCart($event)"
+  ></app-product>
+</div>

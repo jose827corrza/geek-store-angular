@@ -1,0 +1,48 @@
+<nav class='flex justify-between item-center fixed z-10 w-full top-0 px-8 text-sm font-light opacity-80 bg-slate-500 text-white'>
+  <ul class='flex items-center gap-3'>
+      <li class='font-mono font-semibold text-lg text-cyan-200'>
+          Geek Store
+      </li>
+      <!-- <li>
+              Motorcycles
+      </li>
+      <li>
+
+              Skteboards
+      </li>
+      <li>
+              Electronics
+      </li> -->
+  </ul>
+
+  <ul class='sm:hidden md:flex  items-center gap-3 ' >
+      <li class='text-white/60y'>
+          testman&#64;gmail.com
+      </li>
+      <li >
+              My Orders
+      </li>
+      <li>
+              Sign In
+      </li>
+      <li>
+          {{active}}
+      </li>
+      <div [class.hidden]="active" class="top-0 left-0 right-0 bottom-0 bg-gray-300 fixed flex flex-col justify-start items-center p-4">
+        <button (click)="toggleBurger()" class="text-black underline underline-offset-0 text-lg">Close</button>
+        <ul class="flex flex-col items-center">
+          <li><p href="" class="text-gray-700 py-3 text-lg font-mono" >testman&#64;gmail.com</p></li>
+          <li><a href="" class="text-black py-3 text-lg font-mono font-semibold" >My Orders</a></li>
+          <li><a href="" class="text-black py-3 text-lg font-mono font-semibold" >Sign In</a></li>
+        </ul>
+      </div>
+  </ul>
+  <div class=" md:hidden">
+    <button class="navbar-burger flex items-center text-blue-600 p-3" (click)="toggleBurger()">
+      <svg class="block h-4 w-4 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <title>Mobile menu</title>
+        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+      </svg>
+    </button>
+  </div>
+</nav>

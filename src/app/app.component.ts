@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'geek-store-angular';
+  imgParent: string = ''
+
+  onLoaded(img: string){
+    console.log('log parent', img);
+
+  }
+
+
 }
