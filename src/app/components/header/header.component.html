@@ -25,9 +25,6 @@
       <li>
               Sign In
       </li>
-      <li>
-          {{active}}
-      </li>
       <div [class.hidden]="active" class="top-0 left-0 right-0 bottom-0 bg-gray-300 fixed flex flex-col justify-start items-center p-4">
         <button (click)="toggleBurger()" class="text-black underline underline-offset-0 text-lg">Close</button>
         <ul class="flex flex-col items-center">
@@ -35,6 +32,13 @@
           <li><a href="" class="text-black py-3 text-lg font-mono font-semibold" >My Orders</a></li>
           <li><a href="" class="text-black py-3 text-lg font-mono font-semibold" >Sign In</a></li>
         </ul>
+      </div>
+      <div class="relative">
+        <a href="">
+          <img src="./assets/svg/icon_shopping_cart.svg" alt="logo">
+        </a>
+        <div class="absolute right-0 top-3 rounded-full bg-green-400  w-4 h-4"></div>
+        <span class="absolute right-1 top-3">{{ counter }}</span>
       </div>
   </ul>
   <div class=" md:hidden">

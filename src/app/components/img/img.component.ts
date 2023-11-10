@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnInit, OnChanges } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-img',
@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter, OnInit, OnChanges } from '@angu
   styles: [
   ]
 })
-export class ImgComponent implements OnInit, OnChanges {
+export class ImgComponent implements OnInit {
 
   // Runs once, fetch
   // Async, Before render
@@ -16,12 +16,12 @@ export class ImgComponent implements OnInit, OnChanges {
   }
 
   // Listen to changes on @Input
-  ngOnChanges() {
+  // ngOnChanges() {
 
-  }
+  // }
 
 
-  @Input() value: string = '';
+  @Input() value = '';
   @Output() loaded = new EventEmitter<string>();
   imageDefault = '../../../assets/default.png';
 
